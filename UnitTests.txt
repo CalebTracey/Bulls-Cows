@@ -1,0 +1,118 @@
+    /*
+     * Unit Test for Proving  Copy this into Proving and use Run File to 
+     *   to test it.
+     */
+
+    public static void main (String[] args){
+        Proving proof1 = new Proving(6, 13, 1920, 93, 180, 15894, 3.4, -476.8);
+        Proving proof2 = new Proving(6, 13, 1920, 93, 180, 15894, 3.4, 476.8);
+        System.out.println(proof1);
+        System.out.println();
+        System.out.println(proof2);
+    }
+===========================================================================
+Expected Output:
+
+Date = 13-6-1920
+Dtrs = 93  Records = 180
+AvgMilk = 15894  AvgBF% = 3.4  AvgBF = 540
+ExImp = -476.8
+
+Date = 13-6-1920
+Dtrs = 93  Records = 180
+AvgMilk = 15894  AvgBF% = 3.4  AvgBF = 540
+ExImp = +476.8
+
+===========================================================================
+    /*
+     * Unit Test for LactationRecord Copy this into LactationRecord and use 
+     *    Run File to test it.
+     */
+     public static void main(String[] args){
+        ArrayList<LactationRecord> lacRecs = new ArrayList<>();
+        lacRecs.add(new LactationRecord(2, 1, 228, 17232, 5.3));
+        lacRecs.add(new LactationRecord(3, 2, 178, 13290, 4.0));
+        lacRecs.add(new LactationRecord(4, 5, 260, 19266, 3.2));
+        System.out.println("Milk Records");
+        for(LactationRecord record: lacRecs){
+            System.out.println(record);
+        }
+    } // end Unit Test
+===========================================================================
+Expected Output:
+
+Milk Records
+ 2-10     228   17232  5.3   913
+ 3- 2      78    3290  4.0   131
+ 4- 3     260   19266  3.2   616
+===========================================================================
+    /**
+     * Unit Tester for Animal, Cow and Bull.  Copy this into Animal to unit
+     *  test both Cow and Bull. 
+     * @param args command line arguments
+     */
+        public static void main(String[] args) {
+        ClassificationScore 
+                perfectCow = new CowClassificationScore(1, 2, 2010, 30, 20, 20, 30),
+                nullCow = null,
+                perfectBull = new BullClassificationScore(5, 6, 2012, 40, 30, 30),
+                nullBull = null
+
+        Proving noProving = null,
+                proving = new Proving(6, 4, 2016, 20, 200,
+                        1500, 3.25, 324);
+        ArrayList<LactationRecord> empty = null;
+        ArrayList<LactationRecord> lacRecs = new ArrayList<>();
+        lacRecs.add(new LactationRecord(2, 10, 228, 17232, 5.3));
+        lacRecs.add(new LactationRecord(3, 2, 178, 13290, 4.0));
+        lacRecs.add(new LactationRecord(4, 3, 260, 19266, 3.2));
+        Animal bull1 = new Bull("0001", "0002", "0003", 'm', 4, 8, 2000,
+                "aBull", perfectBull, noProving);
+        Animal bull2 = new Bull("0001", "0002", "0003", 'm', 4, 8, 2000,
+                "anotherBull", nullBull, proving);
+        Animal cow1 = new Cow("0001", "0002", "0003", 'f', 4, 8, 2000,
+                "aCow", perfectCow, empty);
+        Animal cow2 = new Cow("0001", "0002", "0003", 'f', 4, 8, 2000,
+                "anotherCow", nullCow, lacRecs);
+        System.out.println(bull1);
+        System.out.println();
+        System.out.println(bull2);
+        System.out.println();
+        System.out.println(cow1);
+        System.out.println();
+        System.out.println(cow2);
+    }
+===========================================================================
+Expected Output:
+
+Registration Number: 0001
+Name: aBull
+Born: 4-8-2000
+Classification: Date = 5-6-2012 GA = 40 DC = 30 BC = 30 Total = 100
+Proof: n/a
+
+Registration Number: 0001
+Name: anotherBull
+Born: 4-8-2000
+Classification:  n/a
+Proof: Date = 4-6-2016
+Dtrs = 20  Records = 200
+AvgMilk = 1500  AvgBF% = 3.25  AvgBF = 48
+ExImp = +324.0
+
+Registration Number: 0001
+Name: aCow
+Born: 4-8-2000
+Classification: Date = 1-2-2010 GA = 30 DC = 20 BC = 20 MS = 30 Total = 100
+Milk Records: 
+No Milk Records
+
+Registration Number: 0001
+Name: anotherCow
+Born: 4-8-2000
+Classification:  n/a
+Milk Records: 
+ 2-10     228   17232  5.3   913
+ 3- 2     178   13290  4.0   531
+ 4- 3     260   19266  3.2   616
+===========================================================================
